@@ -49,10 +49,6 @@ documents = [
         page_content="Choreo goes beyond the infrastructure automation capabilities of a typical internal developer platform. Its self-serviceable capabilities free up developers to be more creative and productive, helping businesses deliver applications faster.",
         metadata={"source": "WSO2 Choreo"}
     ),
-    Document(
-        page_content="Today's breakfast menu at WSO2. Supplier: Healthy Cafe - Garlic Kandha, Hathawariya Kandha. Supplier: Spirit Kitchen - Kawpi with lunumiris and grated coconut",
-        metadata={"source": "Today's breakfast menu at WSO2"},
-    ),
 ]
 
 vector_store = Chroma(embedding_function=embeddings)
@@ -80,6 +76,6 @@ prompt = ChatPromptTemplate.from_messages([("human", message)])
 
 chain = {"context": retriever, "question": RunnablePassthrough()} | prompt | llm
 
-response = chain.invoke("What is today's lunch menu at WSO2?")
+response = chain.invoke("What is WSO2's Identity and Access Management?")
 
 print(response.content)
