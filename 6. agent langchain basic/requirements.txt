@@ -1,0 +1,7 @@
+virtualenv
+langchain
+langchain-openai
+langchain-community
+duckduckgo-search
+pyowm
+langchainhub
